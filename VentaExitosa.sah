@@ -21,3 +21,4 @@ _click(_span("add_circle_outline"));
 _click(_span("Sale monetization_on"));
 _assertContainsText("/Unknown Error processing/", _div("toast-container"))
 _alert("La API esta apagada");
+Logout();
