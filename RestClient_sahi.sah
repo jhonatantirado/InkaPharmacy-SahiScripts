@@ -1,0 +1,21 @@
+$request = new RESTRequest();
+$request.setURL("https://dycsw-inkapharmacy-netcore-api-brash-panther.cfapps.io/api/Security/login");
+$request.setHeader("Content-Type", "application/json");
+
+var $json = {
+    "Username": "Jhonatan.Tirado1",
+    "Password": "P@ssw0rd1"
+};
+var $jsonString = JSON.stringify($json);
+
+$request.setBody($jsonString);
+
+var $response = $request.submit("POST");
+
+var $responseBody = $response.getBodyAsString();
+
+//_log("Response is:  " + $responseBody); // Will log as plain text
+
+//var $s = $response.getResponseCode();
+//_assertNotNull($responseBody);
+//_assertEqual("200",$s);

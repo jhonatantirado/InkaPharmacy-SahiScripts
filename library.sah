@@ -1,0 +1,119 @@
+
+function Login($mat_input_0, $mat_input_1){
+	_click(_div("User *"));
+	_setValue(_textbox("mat-input-0"), $mat_input_0);
+	_setPassword(_password("mat-input-1"), $mat_input_1);
+	_click(_span("Login"));
+}
+
+function Logout(){
+	_click(_span("Logout"));
+	_navigateTo("https://inkafarma-web-intelligent-puku.cfapps.io");
+}
+
+function Cancel(){
+	_click(_span("Cancel"));
+}
+
+
+function Login2($mat_input_0, $mat_input_1){
+	_setValue(_textbox("mat-input-0"), $mat_input_0);
+	_setPassword(_password("mat-input-1"), $mat_input_1);
+	_click(_span("Login"));
+}
+
+function CustomerSave($name, $last_name1, $document_number, $telephone, $email){
+	_click(_span("Customer"));
+	_click(_span("add"));
+	_setValue(_textbox("name"), $name);
+	_setValue(_textbox("last_Name1"), $last_name1);
+	_setValue(_textbox("document_Number"), $document_number);
+	_setValue(_numberbox("telephone"), $telephone);
+	_setValue(_textbox("email"), $email);
+	_click(_span("Save"));
+	//_assertContainsText("/Customer already registered/", _div("toast-container"))
+	_assertContainsText("/created!/", _div("toast-container"))
+}
+
+function ProductSave($name, $price, $stock, $lotnumber, $sanitaryregistrationnumber){
+	_click(_span("Products"));
+	_click(_span("add"));
+	_setValue(_textbox("name"), $name);
+	_setValue(_numberbox("price"), $price);
+	_click(_span("Currency"));
+	_click(_span("Soles"));
+	_setValue(_numberbox("stock"), $stock);
+	_click(_span("Category"));
+	_click(_span("Antialérgicos"));
+	_setValue(_numberbox("lotNumber"), $lotnumber);
+	_setValue(_textbox("sanitaryRegistrationNumber"), $sanitaryregistrationnumber);
+	_click(_svg_path(5));
+	_click(_div("19"));
+	_click(_div("Add new ProductName *Price *SolesCurrency *Stock *AntialérgicosCategory *Lot Number *Sanitary Registration Number *Choose a expiration dateSaveCancel"));
+	_click(_div("Add new ProductName *Price *SolesCurrency *Stock *AntialérgicosCategory *Lot Number *Sanitary Registration Number *Choose a expiration dateSaveCancel"));
+	_click(_div("Add new ProductName *Price *SolesCurrency *Stock *AntialérgicosCategory *Lot Number *Sanitary Registration Number *Choose a expiration dateSaveCancel"));
+	_click(_span("Save"));
+}
+
+function CrearProducto($name, $price, $stock, $lotnumber, $sanitaryregistrationnumber){
+	_click(_submit("Products"));
+	_click(_span("add"));
+	_setValue(_textbox("name"), $name);
+	_setValue(_numberbox("price"), $price);
+	_click(_span("Currency"));
+	_click(_span("Soles"));
+	_setValue(_numberbox("stock"), $stock);
+	_click(_span("Category"));
+	_click(_span("Antialérgicos"));
+	_setValue(_numberbox("lotNumber"), $lotnumber);
+	_click(_div("Sanitary Registration Number *"));
+	_setValue(_textbox("sanitaryRegistrationNumber"), $sanitaryregistrationnumber);
+	_click(_svg_path(5));
+	_click(_div("31"));
+	_click(_span("Save"));
+}
+
+function CrearProductov2($name, $price, $stock, $lotnumber, $sanitaryregistrationnumber, $expirationdate){
+	_click(_span("Products"));
+	_click(_span("add"));
+	_setValue(_textbox("name"), $name);
+	_setValue(_numberbox("price"), $price);
+	_click(_span("Currency"));
+	_click(_span("Soles"));
+	_setValue(_numberbox("stock"), $stock);
+	_click(_span("Category"));
+	_click(_span("Antialérgicos"));
+	_setValue(_numberbox("lotNumber"), $lotnumber);
+	_setValue(_textbox("sanitaryRegistrationNumber"), $sanitaryregistrationnumber);
+	_setValue(_textbox("expirationDate"), $expirationdate);
+	_click(_span("Save"));
+	_assertContainsText("/created!/", _div("toast-container"))
+}
+
+function CrearProductov3($name, $price, $stock, $lotnumber, $sanitaryregistrationnumber){
+	_click(_span("Products"));
+	_click(_span("add"));
+	_setValue(_textbox("name"), $name);
+	_setValue(_numberbox("price"), $price);
+	_click(_span("Currency"));
+	_click(_span("Soles"));
+	_setValue(_numberbox("stock"), $stock);
+	_click(_span("Category"));
+	_click(_span("Antiinfecciosos"));
+	_setValue(_numberbox("lotNumber"), $lotnumber);
+	_setValue(_textbox("sanitaryRegistrationNumber"), $sanitaryregistrationnumber);
+	_click(_svg_path(5));
+	_click(_div("31"));
+	_click(_span("Save"));
+}
+
+function Venta($documentonumbersearch, $productnamesearch){
+	_click(_span("Sale"));
+	_setValue(_textbox("documentoNumberSearch"), $documentonumbersearch);
+	_click(_span("Search"));
+	_setValue(_textbox("productNameSearch"), $productnamesearch);
+	_click(_span("Search[1]"));
+	_click(_span("add_circle_outline"));
+	_click(_span("Sale monetization_on"));
+
+}

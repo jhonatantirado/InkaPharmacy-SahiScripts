@@ -1,0 +1,23 @@
+_include("library.sah");
+_navigateTo("https://inkafarma-web-intelligent-puku.cfapps.io");
+Login2("jhonatan.tirado1", "ESwaEBIQGwoR");
+
+_click(_span("Sale"));
+_click(_div("Document Number *"));
+_setValue(_textbox("documentoNumberSearch"), "42541401");
+_click(_div("Customer: Document Number *Search"));
+_click(_span("Search"));
+_assertContainsText("/Customer found/", _div("toast-container"))
+_setValue(_textbox("productNameSearch"), "amoxi");
+_click(_span("Amoxicilina"));
+_click(_span("Search[1]"));
+_assertContainsText("/Product found/", _div("toast-container"))
+_setValue(_textbox("quantity"), "2");
+_click(_span("add_circle_outline"));
+_setValue(_textbox("productNameSearch"), "gaa");
+_click(_span("Gaap"));
+_click(_span("Search[1]"));
+_click(_span("add_circle_outline"));
+_click(_span("Sale monetization_on"));
+_assertContainsText("/Unknown Error processing/", _div("toast-container"))
+_alert("La API esta apagada");

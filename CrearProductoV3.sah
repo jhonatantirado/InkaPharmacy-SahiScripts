@@ -1,0 +1,33 @@
+/**
+* CrearProductov3($name, $price, $stock, $lotnumber, $sanitaryregistrationnumber)
+* @param $name - 
+* @param  $price - 
+* @param  $stock - 
+* @param  $lotnumber - 
+* @param  $sanitaryregistrationnumber - 
+*/
+function CrearProductov3($name, $price, $stock, $lotnumber, $sanitaryregistrationnumber){
+	_click(_span("Products"));
+	_click(_span("add"));
+	_setValue(_textbox("name"), $name);
+	_setValue(_numberbox("price"), $price);
+	_click(_span("Currency"));
+	_click(_span("Soles"));
+	_setValue(_numberbox("stock"), $stock);
+	_click(_span("Category"));
+	_click(_span("Antiinfecciosos"));
+	_setValue(_numberbox("lotNumber"), $lotnumber);
+	_setValue(_textbox("sanitaryRegistrationNumber"), $sanitaryregistrationnumber);
+	_click(_svg_path(5));
+	_click(_div("31"));
+	_click(_span("Save"));
+}
+
+/* --Functions Above-- */
+
+_navigateTo("https://inkafarma-web-intelligent-puku.cfapps.io");
+_setValue(_textbox("mat-input-0"), "jhonatan.tirado1");
+_setPassword(_password("mat-input-1"), "ESwaEBIQGwoR");
+_click(_submit("Login"));
+CrearProductov3("Me llamo Peru 10", "10.50", "120", "23232", "dd2323");
+

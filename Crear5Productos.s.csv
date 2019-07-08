@@ -1,0 +1,11 @@
+"TestCase","Key Word","Argument 1","Argument 2"
+,"loadSahi","library.sah"
+
+"Crear Productos","[Documentation]","My testcase description. Modify as needed"
+,"Login","jhonatan.tirado1","ESwaEBIQGwoR"
+,"CrearProductov2","Ampicilina 50 mg 1","2.30","100","001234","RS1212","""2021/01/15"""
+,"CrearProductov2","Ampicilina 50 mg 2","2.30","100","001234","RS1212","""2021/11/13"""
+,"CrearProductov2","Ampicilina 50 mg 3","2.30","100","001234","RS1212","""2021/12/05"""
+,"CrearProductov2","Ampicilina 50 mg 4","2.30","100","001234","RS1212","""2021/12/20"""
+,"CrearProductov2","Ampicilina 50 mg 5","2.30","100","001234","RS1212","""2021/01/15"""
+,"Logout"

@@ -1,0 +1,35 @@
+/**
+* CrearProductov2($name, $price, $stock, $lotnumber, $sanitaryregistrationnumber, $expirationdate, $mat_input_2)
+* @param $name - 
+* @param  $price - 
+* @param  $stock - 
+* @param  $lotnumber - 
+* @param  $sanitaryregistrationnumber - 
+* @param  $expirationdate - 
+* @param  $mat_input_2 - 
+*/
+function CrearProductov2($name, $price, $stock, $lotnumber, $sanitaryregistrationnumber, $expirationdate, $mat_input_2){
+	_click(_span("Products"));
+	_click(_span("add"));
+	_setValue(_textbox("name"), $name);
+	_setValue(_numberbox("price"), $price);
+	_click(_span("Currency"));
+	_click(_span("Soles"));
+	_setValue(_numberbox("stock"), $stock);
+	_click(_span("Category"));
+	_click(_span("Antialérgicos"));
+	_setValue(_numberbox("lotNumber"), $lotnumber);
+	_setValue(_textbox("sanitaryRegistrationNumber"), $sanitaryregistrationnumber);
+	_setValue(_textbox("expirationDate"), $expirationdate);
+	_click(_span("Save"));
+	_setValue(_textbox("mat-input-2"), $mat_input_2);
+}
+
+/* --Functions Above-- */
+
+_navigateTo("https://inkafarma-web-intelligent-puku.cfapps.io");
+_setValue(_textbox("mat-input-0"), "jhonatan.tirado1");
+_setPassword(_password("mat-input-1"), "ESwaEBIQGwoR");
+_click(_submit("Login"));
+CrearProductov2("Producto 3", "12.1", "100", "23424", "ff456", "12/31/2021", "producto");
+

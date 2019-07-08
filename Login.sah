@@ -1,0 +1,18 @@
+function testLogin() {
+	$request = new RESTRequest();
+	$request.setURL("https://dycsw-inkapharmacy-netcore-api-brash-panther.cfapps.io/api/Security/login");
+	$request.setHeader("Content-Type", "application/json");
+	$request.setBody("{" +
+	"  \"Username\": \"Jhonatan.Tirado1\"," +
+	"  \"Password\": \"P@ssw0rd1\"" +
+	"}");
+	$response = $request.submit("POST");
+	$responseBody = $response.getBodyAsString();
+	var $message = "Respuesta no nula";
+	//_assertNotNull($responseBody,$message);
+	_assertNull($responseBody,$message);
+	_log("Log: " + $message); // Will log as plain text
+	_alert("Hola");
+}
+
+_runUnitTests(testLogin);

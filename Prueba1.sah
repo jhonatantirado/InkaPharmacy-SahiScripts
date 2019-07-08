@@ -1,0 +1,10 @@
+_navigateTo("https://inkafarma-web-intelligent-puku.cfapps.io");
+_setPassword(_password("mat-input-1"), "ESwaEBIQGwoR");
+_setValue(_textbox("mat-input-0"), "jhonatan.tirado1");
+_click(_span("Login"));
+_click(_span("Customer"));
+_click(_span("add"));
+_setValue(_textbox("name"), "Paolo");
+_setValue(_textbox("last_Name1"), "Guerrero");
+_setValue(_textbox("document_Number"), "12121314");
+_click(_span("Save"));
